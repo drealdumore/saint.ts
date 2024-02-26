@@ -1,9 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
+import { data } from '../data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  projects = signal(data.projects);
 
-  constructor() { }
+  getProjects() {
+    return this.projects();
+  }
+
+  getProjectById(projectId: string) {
+    return this.projects().find((project) => project.id === projectId);
+  }
 }

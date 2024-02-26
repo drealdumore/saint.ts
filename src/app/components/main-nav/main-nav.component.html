@@ -2,7 +2,7 @@
   class="sticky lg:top-0 lg:bottom-auto lg:border-t-transparent lg:border-l-transparent lg:border-r-transparent lg:border-b border border-zinc-200 lg:border-b-zinc-100 bg-white z-[51] top-auto bottom-8  w-full lg:max-w-none max-w-[90%] mx-auto rounded-full lg:rounded-none shadow-xl shadow-black/5 lg:shadow-none">
   <div class="w-full flex items-center justify-between max-w-screen-lx mx-auto md:px-10 min-[350px]:px-4 xs:px-3">
     <div>
-      <a class="flex flex-col group" href="/home">
+      <a class="flex flex-col group" href="/">
         <p class="text-base font-semibold fancy">Saint</p>
         <p class="text-[13px] opacity-80 font-light group-hover:opacity-100 animate-pulse">
           Frontend Developer &amp; Designer
@@ -12,12 +12,18 @@
     <div
       class="flex items-center md:gap-8 gap-2 justify-between md:justify-normal w-full md:w-auto lg:px-0 md:px-1.5 px-0"
       id="nav-links">
-      <a href="/about" [routerLink]="['/about']" routerLinkActive="text-black"
-        class="text-zinc-400 text-with-line hover:text-black before:opacity-0 py-4 transition-colors duration-150 before:absolute group font-medium md:w-auto w-full text-center before:inset-x-0 before:-bottom-[3px] before:h-[1px] before:bg-black max-md:before:hidden relative z-10 text-sm xs:text-base">About</a><a
-        href="/stack" [routerLink]="['/stack']" routerLinkActive="text-black"
-        class="text-zinc-400 hover:text-black before:opacity-0 py-4 transition-colors duration-150 before:absolute group font-medium md:w-auto w-full text-center before:inset-x-0 before:-bottom-[3px] before:h-[1px] before:bg-black max-md:before:hidden relative z-10 text-sm xs:text-base">Stack</a><a
-        href="/bookmarks" [routerLink]="['/bookmarks']" routerLinkActive="text-black"
-        class="text-zinc-400 hover:text-black before:opacity-0 py-4 transition-colors duration-150 before:absolute group font-medium md:w-auto w-full text-center before:inset-x-0 before:-bottom-[3px] before:h-[1px] before:bg-black max-md:before:hidden relative z-10 text-sm xs:text-base">Bookmarks</a>
+      <a [routerLink]="['/about']"
+      class="text-zinc-400 hover:text-black py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base"
+      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a>
+   
+   <a [routerLink]="['/stack']"
+      class="text-zinc-400 hover:text-black py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base"
+      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Stack</a>
+   
+   <a [routerLink]="['/bookmarks']"
+      class="text-zinc-400 hover:text-black py-4 transition-colors duration-150 font-medium md:w-auto w-full text-center text-sm xs:text-base"
+      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Bookmarks</a>
+   
     </div>
   </div>
 </nav>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-stack',
@@ -9,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class StackComponent {
 
+  private dataService = inject(DataService);
+  projects: any[] = [];
+
+  ngOnInit(): void {
+    this.projects = this.dataService.getProjects();
+  }
 }

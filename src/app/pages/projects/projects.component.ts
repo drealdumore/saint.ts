@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, inject, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,10 +12,16 @@ import { RouterModule } from '@angular/router';
 })
 export class ProjectsComponent {
   @Input() id = '';
+  project: any
 
-  constructor(private titleService: Title) {}
+  private titleService = inject(Title);
+  private dataService = inject(DataService);
+
 
   ngOnInit(): void {
     this.titleService.setTitle(this.id);
+    this.project = this.dataService.getProjectById(this.id);
   }
+
+
 }

@@ -1,6 +1,6 @@
 <main class="flex justify-center items-center flex-col">
     <section class="py-14 lg:py-20">
-        <h1 class="text-2xl font-semibold mb-16 w-full">Tech Stack</h1>
+        <h1 class="text-2xl font-semibold mb-16 w-full"  style="font-family: Moranga bold; font-size: 40px;">Tech Stack</h1>
         <div class="grid grid-cols-2 gap-4 mt-8 max-w-6xl mx-auto lg:grid-cols-4 lg:gap-10 lg:mt-14">
             <div
                 class="tw-shadow lg:p-6  flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-white p-4 transition-colors duration-300 hover:bg-gray-100">
@@ -161,40 +161,41 @@
 
     <!--side projects -->
     <div class="pt-6 pb-2 ">
-        <h2 class="text-xl  text-black  mb-8 font-semibold w-full">Side Projects</h2>
+        <h2 class="text-xl  text-black  mb-8 font-semibold w-full" style="font-family: Moranga bold; font-size: 40px;">Side Projects</h2>
         <div class="mt-4 grid grid-cols-2 md:grid-cols-2 gap-4">
         <!-- <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4"> -->
-            <div
-                class="min-w-[120px] flex-col px-4 py-2 border border-gray-200  rounded-lg hover:bg-gray-100  shadow-[0_0_8px_rgba(0,0,0,0.06)] flex relative ">
-                <a target="_blank" title="Maazi" href="https://writee-it.vercel.app/">
-                    <div
-                        class="absolute top-[10%] right-[10%] z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
-                            viewBox="0 0 256 256" class="text-base">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <polyline points="216 100 216 40 156 40" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="144" y1="112" x2="216" y2="40" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                            <path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </path>
-                        </svg>
+            @for(project of projects; track project) {
+
+                <div
+                  class="min-w-[120px] flex-col px-4 py-2 border border-gray-200  rounded-lg hover:bg-gray-100  shadow-[0_0_8px_rgba(0,0,0,0.06)] flex relative ">
+                  <a target="_blank" [title]="project.name" [href]="project.link">
+                    <div class="absolute top-[10%] right-[10%] z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"
+                        class="text-base">
+                        <rect width="256" height="256" fill="none"></rect>
+                        <polyline points="216 100 216 40 156 40" fill="none" stroke="currentColor" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="16"></polyline>
+                        <line x1="144" y1="112" x2="216" y2="40" fill="none" stroke="currentColor" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="16"></line>
+                        <path d="M184,144v64a8,8,0,0,1-8,8H48a8,8,0,0,1-8-8V80a8,8,0,0,1,8-8h64" fill="none" stroke="currentColor"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                        </path>
+                      </svg>
                     </div>
-                </a><a href="/project/write-it">
+                  </a><a href="/project/{{project.id}}">
                     <div class="py-3 relative">
-                        <img class="w-[50px] drop-shadow-xl tw-shadow rounded-sm" src="/assets/write-it.jpeg"
-                            alt="write it">
+                      <img class="w-[88px] drop-shadow-xl tw-shadow rounded-sm" [src]="project.img" [alt]="project.name">
                     </div>
                     <div class="pb-1">
-                        <div class="flex items-center gap-[6px] mt-1">
-                            <h3 class="font-medium text-base">Write it</h3>
-                            <div class="w-[8px] h-[8px] rounded-full bg-green-500" title="Active"></div>
-                        </div>
-                        <p class="text-sm opacity-80">Digital-to-handwritten app: personalize, stylize, and charm.</p>
+                      <div class="flex items-center gap-[6px] mt-1">
+                        <h3 class="font-medium text-base capitalize">{{project.name}}</h3>
+                        <div class="w-[8px] h-[8px] rounded-full bg-green-500" title="Active"></div>
+                      </div>
+                      <p class="text-sm opacity-80">{{project.short}}</p>
                     </div>
-                </a>
-            </div>
+                  </a>
+                </div>
+                }
         </div>
     </div>
 </main>

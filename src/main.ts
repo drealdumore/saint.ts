@@ -35,7 +35,7 @@ bootstrapApplication(AppComponent, {
     provideRouter(
       [
         {
-          path: 'home',
+          path: '',
           title: 'Saint | Angular Dev',
           loadComponent: () =>
             import('./app/pages/home/home.component').then(
@@ -85,7 +85,7 @@ bootstrapApplication(AppComponent, {
 
         {
           path: '',
-          redirectTo: '/home',
+          redirectTo: '/',
           pathMatch: 'full',
         },
       ],
