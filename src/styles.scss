@@ -51,6 +51,22 @@ body {
 
 .active {
   color: black !important;
+  font-weight: 900;
+
+  @media (max-width: 1023px) {
+    color: white !important;
+    background: black;
+    width: 12rem;
+    height: 2.5rem;
+    // width: 5rem;
+    // height: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
 }
 
 .link-btn {
