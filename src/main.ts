@@ -5,38 +5,17 @@ import {
   withInterceptorsFromDi,
 } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { AngularFireStorageModule } from '@angular/fire/compat/storage';
-import { provideDatabase, getDatabase } from '@angular/fire/database';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
-    importProvidersFrom(
-      BrowserModule,
-      AngularFireModule,
-      AngularFireStorageModule,
-      AngularFireDatabaseModule,
-      provideFirebaseApp(() =>
-        initializeApp({
-          projectId: 'saint-portfolio',
-          appId: '1:632662404032:web:44148c4de12fc44e5c3625',
-          storageBucket: 'saint-portfolio.appspot.com',
-          apiKey: 'AIzaSyAVWmvV0PuCbf-Kdv4hbwgjxQL-noHN-54',
-          authDomain: 'saint-portfolio.firebaseapp.com',
-          messagingSenderId: '632662404032',
-        })
-      )
-    ),
-    importProvidersFrom(provideDatabase(() => getDatabase())),
+    importProvidersFrom(BrowserModule),
     provideRouter(
       [
         {
           path: '',
-          title: 'Saint | Angular Dev',
+          title: 'Saint - Angular Dev',
           loadComponent: () =>
             import('./app/pages/home/home.component').then(
               (c) => c.HomeComponent
@@ -52,7 +31,7 @@ bootstrapApplication(AppComponent, {
         },
         {
           path: 'about',
-          title: 'About',
+          title: 'About me | Saint - Angular Dev',
           loadComponent: () =>
             import('./app/pages/about/about.component').then(
               (c) => c.AboutComponent
@@ -69,7 +48,7 @@ bootstrapApplication(AppComponent, {
 
         {
           path: 'stack',
-          title: 'Stack',
+          title: 'Stack | Saint - Angular Dev',
           loadComponent: () =>
             import('./app/pages/stack/stack.component').then(
               (c) => c.StackPageComponent

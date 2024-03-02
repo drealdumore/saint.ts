@@ -19,7 +19,7 @@ export class ProjectsComponent {
 
 
   ngOnInit(): void {
-    this.titleService.setTitle(this.id);
+    this.titleService.setTitle(`${this.id} | Saint - Angular Dev`);
     this.project = this.dataService.getProjectById(this.id);
   }
 
