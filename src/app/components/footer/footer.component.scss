@@ -1,0 +1,16 @@
+/* Add a slash before the link text */
+.link::before {
+  content: "/";
+}
+
+/* Hide the slash when the link is not active */
+.link:not(.active)::before {
+  content: none;
+}
+
+.footer-items {
+  display: flex;
+  gap: 7.5rem;
+}
+@media only screen and (max-width: 600px) {
+}

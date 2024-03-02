@@ -72,7 +72,7 @@ bootstrapApplication(AppComponent, {
           title: 'Stack',
           loadComponent: () =>
             import('./app/pages/stack/stack.component').then(
-              (c) => c.StackComponent
+              (c) => c.StackPageComponent
             ),
         },
         {

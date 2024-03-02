@@ -1,8 +1,6 @@
-<main class="w-full relative max-w-screen-lx mx-auto md:px-10 px-6 min-h-screen pt-16 lg:pt-0">
-
+<main class="w-full relative max-w-screen-lx mx-auto  px-6 min-h-screen">
     <div class="flex items-center mb-4 py-2 bg-transparent sticky top-0 lg:top-14 z-50">
-        <div
-            class="w-[99vw] bg-light-zinc/95 backdrop-blur-xl dark:bg-black/90 absolute top-0 bottom-0 left-1/2 -translate-x-1/2">
+        <div class="w-[97vw] bg-light-zinc/95 backdrop-blur-xl  absolute top-0 bottom-0 left-1/2 -translate-x-1/2">
         </div>
         <div class="flex relative z-20"><a
                 class="text-black  transition-colors  underline hover:no-underline underline-offset-2 px-1.5 -ml-1.5 font-medium"
@@ -11,7 +9,7 @@
                 class="text-black  transition-colors  underline hover:no-underline underline-offset-2 px-1.5 line-clamp-1 font-medium"
                 href="/stack" target="_self"> Projects</a>
             <p> / </p>
-            <p class="font-medium px-1.5 text-zinc-400 dark:text-zinc-600 truncate">{{project.name}}</p>
+            <p class="font-medium px-1.5 text-zinc-400  truncate">{{project.name}}</p>
         </div>
     </div>
     <div class="flex w-full md:pt-5">
@@ -22,13 +20,15 @@
                     style="font-family: Moranga bold; font-size: 40px;">
                     {{project.name}}
                 </h1>
-                <div class="flex mb-5 space-x-4 text-xs">
+                <div class="flex  mb-5 space-x-2 text-xs ">
                     @for(tech of project.tech; track tech) {
                     <div
-                        class="font-mono border border-gray-200 capitalize px-2 py-2  rounded-md text-gray-600 dark:text-gray-400 shadow-[0_1px_2px_rgba(0,0,0,0.08)] dark:shadow-[0_1px_2px_rgba(0,0,0,0.3)] text-xs">
-                        {{tech}}</div>
+                        class="border border-gray-200 capitalize px-2 py-2  rounded-md text-gray-600  shadow-[0_1px_2px_rgba(0,0,0,0.08)] text-xs">
+                        {{tech}}
+                    </div>
                     }
                 </div>
+
                 <div class="flex justify-center items-center space-x-5 max-w-[620px] w-full mt-5 mb-10">
                     <a [href]="project.link" target="_blank"
                         class=" link-btn flex items-center justify-center w-[80] tw-shadow px-4 py-2 text-base text-center text-white bg-slate-900 rounded-lg shadow-lg cursor-alias">
@@ -58,4 +58,3 @@
         </div>
     </div>
 </main>
-

@@ -1,54 +1,56 @@
-<div class="mx-20">
+<main class="mx-auto sm:mx-5 lg:mx-20 ">
   <!-- header -->
-
   <header
-    class="flex items-center  justify-start md:gap-24 gap-16 max-lg:py-20 w-full lg:pt-24 lg:pb-8 mb-12 lg:justify-between lg:flex-row flex-col-reverse">
-    <div class="lg:h-2/6 h-2/5 max-lg:w-full max-lg:flex">
-      <div class="max-w-[170px] w-full flex-shrink-0 mb-10">
-        <img id="avatar" src="./assets/avatars/avatar-smile.png" class="aspect-square rounded-full"
+    class="flex flex-col items-center justify-start md:gap-24 gap-16  w-full lg:pb-8 mb-12 lg:justify-between lg:flex-row ">
+    <article class="flex flex-col lg:h-2/6 h-2/5 max-lg:w-full max-lg:flex ">
+      <article class="max-w-[170px] w-full flex-shrink-0 mb-10 ">
+        <img id="avatar" src="./assets/avatars/avatar-smile.png" class=" tw-shadow aspect-square rounded-full"
           alt="saint avatar" />
-      </div>
-      <div class="flex md:items-center flex-row gap-x-3 mb-4">
-        <p class=" items-center gap-2 hidden md:flex">Current Status:</p>
-        <div class="flex items-center flex-row gap-x-2">
+      </article>
+      <article class="flex items-center  gap-x-3 mb-4">
+        <p class="font-semibold items-center gap-2 hidden md:flex">Current Status:</p>
+        <article class="flex items-center flex-row gap-x-2">
           <span class="relative flex h-3 w-3">
-            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#000000] opacity-75"></span>
-            <span class="relative inline-flex rounded-full h-auto w-7 bg-[#000000]"></span>
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-700 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-auto w-7 bg-emerald-700"></span>
           </span>
-          <p class="flex items-center gap-2 text-[#000000]">Open to work</p>
-        </div>
-      </div>
+          <p class="flex font-semibold items-center gap-2 text-emerald-700">Open to work</p>
+        </article>
+      </article>
 
-      <div class="cursor-text max-w-2xl">
+      <article class="cursor-text max-w-2xl">
         <h1
           class="text-xl font-semibold leading-snug pointer-events-none transition-colors group hover:text-zinc-400 mb-10">
-          <span class="group-hover:underline  underline-offset-4"> <span
-              style="font-family: Moranga bold; font-size: 40px; font-weight: 900;">Saint</span>
+          <span class="group-hover:underline underline-offset-4"> <span class="font-bold text-2xl"
+              style="font-family: Moranga bold; ">Saint</span>
             | Angular Dev </span>
           <br>
           Frontend Developer building digital products.
         </h1>
-        <p class=" mb-4 text-base"> Hi 👋 I'm <span
-            style="font-family: Moranga bold; font-size: 20px; font-weight: 900;">Saint</span> , a software engineer and
-          minimalist. With over 2 years of
+        <p class=" mb-4 text-base"> Hi 👋 I'm <span class="font-bold text-lg font-serif">Saint</span> , a Software
+          <!-- style="font-family: Moranga bold; ">Saint</span> , a Software -->
+          Engineer and
+          Minimalist. With over 2 years of
           hands-on experience, I've mastered the art of crafting seamless digital experiences. I'm interested in
-          Angular, Node, Software Development, Startups, Cryptocurrencies and Music.</p>
-      </div>
-    </div>
+          Angular, Software Development, Startups, Cryptocurrencies and Music.
+        </p>
+      </article>
+    </article>
   </header>
 
   <!--  projects -->
-  <div class="pt-6 pb-2 ">
-    <h2 class="text-xl  text-black  mb-3 font-semibold w-full" style="font-family: Moranga bold; font-size: 40px;">Projects</h2>
+  <article class="pt-6 pb-2 ">
+    <h2 class="text-black mb-3 font-bold text-2xl" style="font-family: Moranga bold;">
+      Projects</h2>
     <p class="text-lg  text-black  mb-8 font-semibold w-full">Some of my work</p>
-    <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
-      <!-- <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4"> -->
+    <article class="mt-4 pro-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      <!-- <article class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4"> -->
       @for(project of projects; track project) {
-
-      <div
+      <article
         class="min-w-[120px] flex-col px-4 py-2 border border-gray-200  rounded-lg hover:bg-gray-100  shadow-[0_0_8px_rgba(0,0,0,0.06)] flex relative ">
         <a target="_blank" [title]="project.name" [href]="project.link">
-          <div class="absolute top-[10%] right-[10%] z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100">
+          <article
+            class="absolute top-[10%] right-[10%] z-10 opacity-50 hover:opacity-100 hover:scale-[1.1] duration-100">
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"
               class="text-base">
               <rect width="256" height="256" fill="none"></rect>
@@ -60,63 +62,59 @@
                 stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
               </path>
             </svg>
-          </div>
+          </article>
         </a><a href="/project/{{project.id}}">
-          <div class="py-3 relative">
+          <article class="py-3 relative">
             <img class="w-[88px] drop-shadow-xl tw-shadow rounded-sm" [src]="project.img" [alt]="project.name">
-          </div>
-          <div class="pb-1">
-            <div class="flex items-center gap-[6px] mt-1">
+          </article>
+          <article class="pb-1">
+            <article class="flex items-center gap-[6px] mt-1">
               <h3 class="font-medium text-base capitalize">{{project.name}}</h3>
-              <div class="w-[8px] h-[8px] rounded-full bg-green-500" title="Active"></div>
-            </div>
+              <article class="w-[8px] h-[8px] rounded-full bg-green-500" title="Active"></article>
+            </article>
             <p class="text-sm opacity-80">{{project.short}}</p>
-          </div>
+          </article>
         </a>
-      </div>
+      </article>
       }
-    </div>
-  </div>
+    </article>
+  </article>
 
-</div>
 
-<!-- have a project -->
-<div class="relative w-full pb-[100px] pt-[50px] mt-20">
-  <div class="w-full max-w-[90%] mx-auto">
-    <div class="w-full flex gap-4 justify-between ">
-      <div class="w-full flex flex-col gap-10">
-        <div class="w-full flex flex-col gap-6">
-          <div class="relative">
-            <h1 class="text-5xl md:text-7xl capitalize beauty " style="font-family: Moranga bold; ">Got a project? Lets
-              Talk</h1><span class="absolute -top-14 md:-ml-12 fancy text-9xl opacity-5 "
-              style="font-family: Moranga bold; ">Have an idea?</span>
-          </div>
-          <div class="w-full flex flex-col gap-6 md:gap-12 ">
+  <!-- have a project -->
+  <article class="relative w-full pb-[100px] pt-[50px] mt-20">
+    <article class="w-full flex flex-col gap-6">
+      <article class="relative">
+        <h1 class="text-3xl leading-8 project md:text-3xl  capitalize beauty " style="font-family: Moranga bold; ">Got a
+          project? Lets
+          Talk
+        </h1>
+        <span class="text-5xl leading-8 md:text-3xl capitalize absolute idea -top-2 opacity-5 "
+          style="font-family: Moranga bold; ">
+          Have an idea?
+        </span>
+      </article>
+      <article class="w-full flex flex-col gap-6 md:gap-12 ">
+        <article>
+          <p class="text-base font-normal opacity-80">You have a project? Say hi, and we can figure out how I can
+            help you!.</p>
+        </article>
+        <a target="_blank" href="mailto:samuelisah234@gmail.com">
+          <button
+            class="flex box-shadow-btn  w-[auto] gap-2 items-center p-2.5 sm:p-3.5 cursor-alias   rounded-md text-slate-50">
 
-            <div>
-
-              <p class="text-base font-normal opacity-80">You have a project? Say hi, and we can figure out how I can
-                help you!.</p>
-            </div>
-            <a target="_blank" href="#"><button
-                class="flex box-shadow-btn gap-3 items-center p-3 cursor-alias border border-black bg-black rounded-md text-slate-50">
-
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#e3e3e3"
-                  fill="none">
-                  <path
-                    d="M22 11.5667C22 16.8499 17.5222 21.1334 12 21.1334C11.3507 21.1343 10.7032 21.0742 10.0654 20.9545C9.60633 20.8682 9.37678 20.8251 9.21653 20.8496C9.05627 20.8741 8.82918 20.9948 8.37499 21.2364C7.09014 21.9197 5.59195 22.161 4.15111 21.893C4.69874 21.2194 5.07275 20.4112 5.23778 19.5448C5.33778 19.0148 5.09 18.5 4.71889 18.1231C3.03333 16.4115 2 14.1051 2 11.5667C2 6.28357 6.47778 2 12 2C17.5222 2 22 6.28357 22 11.5667Z"
-                    stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
-                  <path d="M11.9955 12H12.0045M15.991 12H16M8 12H8.00897" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-                Let's have a chat
-              </button>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- <waitlist /> -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" color="#e3e3e3"
+              fill="none">
+              <path
+                d="M22 11.5667C22 16.8499 17.5222 21.1334 12 21.1334C11.3507 21.1343 10.7032 21.0742 10.0654 20.9545C9.60633 20.8682 9.37678 20.8251 9.21653 20.8496C9.05627 20.8741 8.82918 20.9948 8.37499 21.2364C7.09014 21.9197 5.59195 22.161 4.15111 21.893C4.69874 21.2194 5.07275 20.4112 5.23778 19.5448C5.33778 19.0148 5.09 18.5 4.71889 18.1231C3.03333 16.4115 2 14.1051 2 11.5667C2 6.28357 6.47778 2 12 2C17.5222 2 22 6.28357 22 11.5667Z"
+                stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+              <path d="M11.9955 12H12.0045M15.991 12H16M8 12H8.00897" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Let's have a chat
+          </button>
+        </a>
+      </article>
+    </article>
+  </article>
+</main>

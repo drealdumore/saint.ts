@@ -8,7 +8,7 @@ import { DataService } from '../../services/data.service';
   templateUrl: './stack.component.html',
   styleUrl: './stack.component.scss'
 })
-export class StackComponent {
+export class StackPageComponent {
 
   private dataService = inject(DataService);
   projects: any[] = [];

@@ -1,12 +1,12 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
-import { WaitlistComponent } from '../../components/waitlist/waitlist.component';
 import { CommonModule } from '@angular/common';
 import { DataService } from '../../services/data.service';
+import { StackComponent } from '../../components/stack/stack.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [WaitlistComponent, CommonModule],
+  imports: [ CommonModule, StackComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

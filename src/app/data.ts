@@ -1,4 +1,19 @@
-export const data = {
+interface Project {
+  name: string;
+  id: string;
+  link: string;
+  short: string;
+  tech: string[];
+  img: string;
+  description: string;
+  features: string[];
+}
+
+interface ProjectData {
+  projects: Project[];
+}
+
+export const data: ProjectData = {
   projects: [
     {
       name: 'write it',
@@ -45,7 +60,7 @@ export const data = {
       link: 'https://listen-up-music-app.vercel.app/playlist',
       short:
         'Explore, curate, and enjoy music seamlessly with our user-friendly app.',
-      tech: ['angular', 'CSS', 'firebase', 'git', 'spotify Api'],
+      tech: ['angular', 'CSS', 'firebase', 'git', 'Api'],
       img: '/assets/listen-up desktop.png',
       description:
         'Discover, curate, and enjoy music with our intuitive music app. Create playlists, explore diverse genres, track your listening history, and search for your favorite artists, albums, and songs. 🎧 Experience seamless playback through a user-friendly interface. Your perfect companion for a musical journey! 🚀 ',
@@ -75,4 +90,47 @@ export const data = {
       ],
     },
   ],
+};
+
+export const bookmarks = {
+  frontend: [
+    {
+      name: 'svgl',
+      link: 'https://svgl.vercel.app/',
+      short: 'beautiful css',
+      img: '/assets/image1.png', // Replace with actual image path
+    },
+    {
+      name: 'Aceternty UI',
+      link: 'https://ui.aceternity.com',
+      short: 'beautiful css',
+      img: '/assets/image2.png', // Replace with actual image path
+    },
+    {
+      name: 'Aceternty UI',
+      link: 'https://ui.aceternity.com',
+      short: 'beautiful css',
+      img: '/assets/image3.png', // Replace with actual image path
+    }
+  ],
+  blog: [
+    {
+      name: 'Aceternty UI',
+      link: 'https://ui.aceternity.com',
+      short: 'beautiful css',
+      img: '/assets/image4.png', // Replace with actual image path
+    },
+    {
+      name: 'Aceternty UI',
+      link: 'https://ui.aceternity.com',
+      short: 'beautiful css',
+      img: '/assets/image5.png', // Replace with actual image path
+    },
+    {
+      name: 'Aceternty UI',
+      link: 'https://ui.aceternity.com',
+      short: 'beautiful css',
+      img: '/assets/image6.png', // Replace with actual image path
+    }
+  ]
 };
