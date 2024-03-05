@@ -55,6 +55,26 @@ export const data: ProjectData = {
       ],
     },
     {
+      name: 'NewsSnap',
+      id: 'news-snap',
+      link: 'https://news-snap.vercel.app/',
+      short:
+        'NewsSnap: Web app with HTML, PicoCSS, JavaScript. Fetches headlines, detailed info with a click.',
+      tech: ['javascript', 'PicoCSS', 'News API', 'git', 'vercel'],
+      img: '/assets/news-snap desktop.png',
+      description:
+        'The NewsSnap App is a simple web application built with HTML, PicoCSS, and JavaScript. It leverages the News API to fetch and display news headlines. Users can click on a particular news card to navigate to the main news source for detailed information.',
+      features: [
+        'Intuitive News Search',
+        'Real-time Updates',
+        'Detailed News Information',
+        'View a list of news headlines with images.',
+        'Click on a news card to visit the main news source for the complete news article.',
+        'Sleek User Interface',
+        'Responsive Design',
+      ],
+    },
+    {
       name: 'Listen up',
       id: 'Listen-up',
       link: 'https://listen-up-music-app.vercel.app/playlist',
@@ -111,7 +131,7 @@ export const bookmarks = {
       link: 'https://ui.aceternity.com',
       short: 'beautiful css',
       img: '/assets/image3.png', // Replace with actual image path
-    }
+    },
   ],
   blog: [
     {
@@ -131,6 +151,6 @@ export const bookmarks = {
       link: 'https://ui.aceternity.com',
       short: 'beautiful css',
       img: '/assets/image6.png', // Replace with actual image path
-    }
-  ]
+    },
+  ],
 };
